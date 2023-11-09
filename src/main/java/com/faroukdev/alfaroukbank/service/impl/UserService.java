@@ -1,8 +1,12 @@
 package com.faroukdev.alfaroukbank.service.impl;
 
-import com.faroukdev.alfaroukbank.dto.BankResponse;
-import com.faroukdev.alfaroukbank.dto.UserRequest;
+import com.faroukdev.alfaroukbank.dto.*;
 
 public interface UserService {
     BankResponse createAccount(UserRequest userRequest);
+    BankResponse balanceEnquiry(EnquiryRequest request);
+    String nameEnquiry(EnquiryRequest request);
+    BankResponse creditAccount(CreditDebitRequest request);
+    BankResponse debitAccount(CreditDebitRequest request);
+    BankResponse transfer(TransferRequest request);
 }
