@@ -1,2 +1,6 @@
-package com.faroukdev.alfaroukbank.entity;public enum Role {
+package com.faroukdev.alfaroukbank.entity;
+
+public enum Role {
+    ROLE_USER,
+    ROLE_ADMIN
 }

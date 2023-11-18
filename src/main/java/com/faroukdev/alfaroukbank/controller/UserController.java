@@ -30,6 +30,11 @@ public class UserController {
         return userService.createAccount(userRequest);
     }
 
+    @PostMapping("/login")
+    public BankResponse login(@RequestBody LoginDto loginDto){
+        return userService.login(loginDto);
+    }
+
     @Operation(
             summary = "Balance Enquiry",
             description = "Given an account number, check how much the user has"
@@ -38,7 +43,6 @@ public class UserController {
             responseCode = "200",
             description = "Http status 200 SUCCESS"
     )
-
     @GetMapping("/balanceEnquiry")
     public BankResponse balanceEnquiry(@RequestBody EnquiryRequest request) {
         return userService.balanceEnquiry(request);
